@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 				ClipData clip = ClipData.newPlainText("t e x t", output.getText());
 				clipboard.setPrimaryClip(clip);
 
-				Toast.makeText(getApplicationContext(), "Text copied to C L I P B O A R D", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), R.string.copy_confirmation, Toast.LENGTH_SHORT).show();
 			}
 		});
 	}

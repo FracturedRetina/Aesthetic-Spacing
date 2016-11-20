@@ -1,3 +1,10 @@
 <resources>
 	<string name="app_name">A E S T H E T I C  Spacing</string>
+	<string name="copy_confirmation">Text copied to  C L I P B O A R D</string>
+	<string name="input_prompt">Your text here</string>
+	<string name="all_caps_prompt">All caps?</string>
+	<string name="kerning_prompt">Spaces between letters</string>
+	<string name="spacing_prompt">Multiply spaces by</string>
+	<string name="output_placeholder">Output</string>
+	<string name="copy_prompt">Copy to Clipboard</string>
 </resources>

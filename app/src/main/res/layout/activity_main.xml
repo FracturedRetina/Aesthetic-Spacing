@@ -17,7 +17,7 @@
 			android:layout_alignParentTop="true"
 			android:layout_centerHorizontal="true"
 			android:ems="10"
-			android:hint="Input"
+			android:hint="@string/input_prompt"
 			android:inputType="textMultiLine"/>
 
 	<CheckBox
@@ -27,7 +27,7 @@
 			android:layout_alignLeft="@+id/input"
 			android:layout_alignRight="@+id/input"
 			android:layout_below="@+id/input"
-			android:text="All caps?"/>
+			android:text="@string/all_caps_prompt"/>
 
 	<TextView
 			android:id="@+id/labelKerning"
@@ -38,7 +38,7 @@
 			android:layout_below="@+id/capitalize"
 			android:gravity="center_vertical"
 			android:singleLine="false"
-			android:text="Spaces Between Letters:"/>
+			android:text="@string/kerning_prompt"/>
 
 	<TextView
 			android:id="@+id/output"
@@ -49,7 +49,7 @@
 			android:layout_alignParentBottom="true"
 			android:layout_alignRight="@+id/capitalize"
 			android:layout_alignStart="@+id/labelKerning"
-			android:text="Output"
+			android:text="@string/output_placeholder"
 			android:textIsSelectable="true"/>
 
 	<TextView
@@ -61,7 +61,7 @@
 			android:layout_below="@+id/kerning"
 			android:gravity="center_vertical"
 			android:singleLine="false"
-			android:text="Multiply Spaces By:"/>
+			android:text="@string/spacing_prompt"/>
 
 	<SeekBar
 			android:id="@+id/kerning"
@@ -92,6 +92,6 @@
 			android:layout_above="@+id/output"
 			android:layout_centerHorizontal="true"
 			android:singleLine="true"
-			android:text="Copy to Clipboard"/>
+			android:text="@string/copy_prompt"/>
 
 </RelativeLayout>
