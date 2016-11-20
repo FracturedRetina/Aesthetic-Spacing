@@ -11,87 +11,87 @@
 		tools:context="com.eshimoniak.aestheticspacing.MainActivity">
 
 	<EditText
+			android:id="@+id/input"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:inputType="textMultiLine"
-			android:ems="10"
-			android:id="@+id/input"
 			android:layout_alignParentTop="true"
 			android:layout_centerHorizontal="true"
-			android:hint="Input"/>
+			android:ems="10"
+			android:hint="Input"
+			android:inputType="textMultiLine"/>
 
 	<CheckBox
+			android:id="@+id/capitalize"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="All caps?"
-			android:id="@+id/capitalize"
-			android:layout_below="@+id/input"
 			android:layout_alignLeft="@+id/input"
-			android:layout_alignRight="@+id/input"/>
+			android:layout_alignRight="@+id/input"
+			android:layout_below="@+id/input"
+			android:text="All caps?"/>
 
 	<TextView
+			android:id="@+id/labelKerning"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Spaces Between Letters:"
-			android:id="@+id/labelKerning"
 			android:layout_alignLeft="@+id/input"
 			android:layout_alignStart="@+id/input"
 			android:layout_below="@+id/capitalize"
+			android:gravity="center_vertical"
 			android:singleLine="false"
-			android:gravity="center_vertical"/>
+			android:text="Spaces Between Letters:"/>
 
 	<TextView
+			android:id="@+id/output"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Output"
-			android:id="@+id/output"
-			android:layout_alignParentBottom="true"
-			android:layout_alignLeft="@+id/labelKerning"
-			android:layout_alignStart="@+id/labelKerning"
-			android:layout_alignRight="@+id/capitalize"
 			android:layout_alignEnd="@+id/capitalize"
+			android:layout_alignLeft="@+id/labelKerning"
+			android:layout_alignParentBottom="true"
+			android:layout_alignRight="@+id/capitalize"
+			android:layout_alignStart="@+id/labelKerning"
+			android:text="Output"
 			android:textIsSelectable="true"/>
 
 	<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Multiply Spaces By:"
 			android:id="@+id/labelSpacing"
-			android:singleLine="false"
-			android:gravity="center_vertical"
-			android:layout_below="@+id/kerning"
-			android:layout_alignLeft="@+id/labelKerning"
-			android:layout_alignStart="@+id/labelKerning"/>
-
-	<SeekBar
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:id="@+id/kerning"
-			android:layout_below="@+id/labelKerning"
 			android:layout_alignLeft="@+id/labelKerning"
 			android:layout_alignStart="@+id/labelKerning"
-			android:layout_alignRight="@+id/capitalize"
+			android:layout_below="@+id/kerning"
+			android:gravity="center_vertical"
+			android:singleLine="false"
+			android:text="Multiply Spaces By:"/>
+
+	<SeekBar
+			android:id="@+id/kerning"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
 			android:layout_alignEnd="@+id/capitalize"
+			android:layout_alignLeft="@+id/labelKerning"
+			android:layout_alignRight="@+id/capitalize"
+			android:layout_alignStart="@+id/labelKerning"
+			android:layout_below="@+id/labelKerning"
 			android:max="10"/>
 
 	<SeekBar
+			android:id="@+id/spacing"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:id="@+id/spacing"
-			android:max="10"
-			android:layout_below="@+id/labelSpacing"
+			android:layout_alignEnd="@+id/kerning"
 			android:layout_alignLeft="@+id/labelSpacing"
-			android:layout_alignStart="@+id/labelSpacing"
 			android:layout_alignRight="@+id/kerning"
-			android:layout_alignEnd="@+id/kerning"/>
+			android:layout_alignStart="@+id/labelSpacing"
+			android:layout_below="@+id/labelSpacing"
+			android:max="10"/>
 
 	<Button
+			android:id="@+id/copyButton"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Copy to Clipboard"
-			android:id="@+id/copyButton"
 			android:layout_above="@+id/output"
 			android:layout_centerHorizontal="true"
-			android:singleLine="true"/>
+			android:singleLine="true"
+			android:text="Copy to Clipboard"/>
 
 </RelativeLayout>

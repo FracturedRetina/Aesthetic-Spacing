@@ -2,7 +2,7 @@ package com.eshimoniak.aestheticspacing;
 
 /**
  * Created by Evan Shimoniak on 11/19/16.
-**/
+ **/
 public class SpaceModifier {
 	public static String addSpaces(String str, int kerning, int spaceWidth, boolean nbsp) {
 		String kern = "";

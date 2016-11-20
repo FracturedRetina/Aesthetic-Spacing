@@ -38,10 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
 		input.addTextChangedListener(new TextWatcher() {
 			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			}
 
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {}
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
@@ -56,10 +58,12 @@ public class MainActivity extends AppCompatActivity {
 			}
 
 			@Override
-			public void onStartTrackingTouch(SeekBar seekBar) {}
+			public void onStartTrackingTouch(SeekBar seekBar) {
+			}
 
 			@Override
-			public void onStopTrackingTouch(SeekBar seekBar) {}
+			public void onStopTrackingTouch(SeekBar seekBar) {
+			}
 		});
 
 		spacing.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -69,10 +73,12 @@ public class MainActivity extends AppCompatActivity {
 			}
 
 			@Override
-			public void onStartTrackingTouch(SeekBar seekBar) {}
+			public void onStartTrackingTouch(SeekBar seekBar) {
+			}
 
 			@Override
-			public void onStopTrackingTouch(SeekBar seekBar) {}
+			public void onStopTrackingTouch(SeekBar seekBar) {
+			}
 		});
 
 		capitalize.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -89,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 				ClipData clip = ClipData.newPlainText("t e x t", output.getText());
 				clipboard.setPrimaryClip(clip);
 
-				Toast.makeText(getApplicationContext(), "Text copied to C L I P B O A R D", Toast.LENGTH_SHORT);
+				Toast.makeText(getApplicationContext(), "Text copied to C L I P B O A R D", Toast.LENGTH_SHORT).show();
 			}
 		});
 	}
