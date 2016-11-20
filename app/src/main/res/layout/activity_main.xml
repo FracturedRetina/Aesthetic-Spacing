@@ -40,17 +40,16 @@
 			android:singleLine="false"
 			android:text="@string/kerning_prompt"/>
 
-	<TextView
-			android:id="@+id/output"
+	<SeekBar
+			android:id="@+id/kerning"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_alignEnd="@+id/capitalize"
 			android:layout_alignLeft="@+id/labelKerning"
-			android:layout_alignParentBottom="true"
 			android:layout_alignRight="@+id/capitalize"
 			android:layout_alignStart="@+id/labelKerning"
-			android:text="@string/output_placeholder"
-			android:textIsSelectable="true"/>
+			android:layout_below="@+id/labelKerning"
+			android:max="10"/>
 
 	<TextView
 			android:id="@+id/labelSpacing"
@@ -62,17 +61,6 @@
 			android:gravity="center_vertical"
 			android:singleLine="false"
 			android:text="@string/spacing_prompt"/>
-
-	<SeekBar
-			android:id="@+id/kerning"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_alignEnd="@+id/capitalize"
-			android:layout_alignLeft="@+id/labelKerning"
-			android:layout_alignRight="@+id/capitalize"
-			android:layout_alignStart="@+id/labelKerning"
-			android:layout_below="@+id/labelKerning"
-			android:max="10"/>
 
 	<SeekBar
 			android:id="@+id/spacing"
@@ -93,5 +81,17 @@
 			android:layout_centerHorizontal="true"
 			android:singleLine="true"
 			android:text="@string/copy_prompt"/>
+
+	<TextView
+			android:id="@+id/output"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignEnd="@+id/capitalize"
+			android:layout_alignLeft="@+id/labelKerning"
+			android:layout_alignParentBottom="true"
+			android:layout_alignRight="@+id/capitalize"
+			android:layout_alignStart="@+id/labelKerning"
+			android:text="@string/output_placeholder"
+			android:textIsSelectable="true"/>
 
 </RelativeLayout>
