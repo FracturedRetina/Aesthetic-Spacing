@@ -3,8 +3,8 @@ package com.eshimoniak.aestheticspacing;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -81,10 +81,16 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 
+//		capitalize.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				update();
+//			}
+//		});
 		capitalize.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				update();
+				update(isChecked);
 			}
 		});
 
@@ -100,13 +106,17 @@ public class MainActivity extends AppCompatActivity {
 		});
 	}
 
-	public void update() {
+	private void update(boolean allCaps) {
 		String str = SpaceModifier.addSpaces(input.getText().toString(), kerning.getProgress(), spacing.getProgress(), true);
 
-		if (capitalize.isEnabled()) {
+		if (allCaps) {
 			str = str.toUpperCase();
 		}
 
 		output.setText(str);
+	}
+
+	private void update() {
+		update(capitalize.isPressed());
 	}
 }
