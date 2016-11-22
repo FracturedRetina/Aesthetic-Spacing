@@ -7,4 +7,5 @@
 	<string name="spacing_prompt">Multiply spaces by</string>
 	<string name="output_placeholder">Output</string>
 	<string name="copy_prompt">Copy to Clipboard</string>
+	<string name="nbsp_prompt">Non-breaking?</string>
 </resources>

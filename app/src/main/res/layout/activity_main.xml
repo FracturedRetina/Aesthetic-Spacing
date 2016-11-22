@@ -74,6 +74,32 @@
 			android:layout_below="@+id/labelSpacing"
 			android:max="10"/>
 
+	<CheckBox
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/nbsp_prompt"
+			android:id="@+id/nbsp"
+			android:layout_below="@+id/spacing"
+			android:layout_alignLeft="@+id/output"
+			android:layout_alignStart="@+id/output"
+			android:layout_alignRight="@+id/spacing"
+			android:layout_alignEnd="@+id/spacing"
+			android:checked="false"/>
+
+	<TextView
+			android:id="@+id/output"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/output_placeholder"
+			android:textIsSelectable="true"
+			android:textStyle="normal"
+			android:textSize="18sp"
+			android:textColor="#111"
+			android:layout_below="@+id/nbsp"
+			android:layout_alignLeft="@+id/spacing"
+			android:layout_alignStart="@+id/spacing"
+			android:layout_marginTop="20dp"/>
+
 	<Button
 			android:id="@+id/copyButton"
 			android:layout_width="wrap_content"
@@ -82,18 +108,5 @@
 			android:text="@string/copy_prompt"
 			android:layout_below="@+id/output"
 			android:layout_centerHorizontal="true"/>
-
-	<TextView
-			android:id="@+id/output"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/output_placeholder"
-			android:textIsSelectable="true"
-			android:layout_below="@+id/spacing"
-			android:layout_alignLeft="@+id/spacing"
-			android:layout_alignStart="@+id/spacing"
-			android:layout_alignRight="@+id/spacing"
-			android:layout_alignEnd="@+id/spacing"
-			android:layout_marginTop="20dp"/>
 
 </RelativeLayout>

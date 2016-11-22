@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 	private SeekBar kerning;
 	private SeekBar spacing;
 	private CheckBox capitalize;
+	private CheckBox nbsp;
 	private Button copy;
 
 	@Override
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 		kerning = (SeekBar) findViewById(R.id.kerning);
 		spacing = (SeekBar) findViewById(R.id.spacing);
 		capitalize = (CheckBox) findViewById(R.id.capitalize);
+		nbsp = (CheckBox) findViewById(R.id.nbsp);
 		copy = (Button) findViewById(R.id.copyButton);
 
 		input.addTextChangedListener(new TextWatcher() {
@@ -81,16 +83,17 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 
-//		capitalize.setOnClickListener(new View.OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				update();
-//			}
-//		});
 		capitalize.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				update(isChecked);
+				update(isChecked, nbsp.isChecked());
+			}
+		});
+
+		nbsp.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				update(capitalize.isChecked(), isChecked);
 			}
 		});
 
@@ -106,8 +109,8 @@ public class MainActivity extends AppCompatActivity {
 		});
 	}
 
-	private void update(boolean allCaps) {
-		String str = SpaceModifier.addSpaces(input.getText().toString(), kerning.getProgress(), spacing.getProgress(), true);
+	private void update(boolean allCaps, boolean nonBreaking) {
+		String str = SpaceModifier.addSpaces(input.getText().toString(), kerning.getProgress(), spacing.getProgress(), nonBreaking);
 
 		if (allCaps) {
 			str = str.toUpperCase();
@@ -117,6 +120,6 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	private void update() {
-		update(capitalize.isPressed());
+		update(capitalize.isChecked(), nbsp.isChecked());
 	}
 }
